@@ -33,22 +33,7 @@
     </head>
     <body>
         <div align="center">
-            <h1>Winwheel.js example wheel - 2 part wheel</h1>
-            <p>
-                Here is an example of a 2 part wheel, where there are 2 rings of segments. This is achieved by creating a second
-                Winwheel object and positioning it over the top of the first wheel. One wheel acts as the "primary" and has the
-                animation applied to it, the other wheel is the "secondary" which we just update during the animation loop to have
-                the same rotation angle as the primary wheel.
-            </p>
-            <br />
-            <p>
-        		<strong>2019-01-01 Note:</strong> Currently Winwheel.js does not support animating multiple independent wheels on the same page,
-        		nor do I really recommend trying to create games made up of multiple wheels. While I do know how to add multiwheel support to Winwheel.js,
-        		experience in helping people to do this over the last year or so has shown that, depending on the options used, the framerate is so bad with
-        		as little as three wheels that any game made does not look good and is almost unusable. Best to stick to single wheel uses of Winwheel.js for now.
-        	</p>
-        	<br />
-            <p>Choose a power setting then press the Spin button. You will be alerted to the prize won when the spinning stops.</p>
+            
             <br />
             <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
@@ -86,13 +71,25 @@
             // Need to create the SECONDARY wheel first because on construct the variable which keeps track of the wheel to animate will
             // be set to the last created wheel, and we want the outer one the primary with the animation etc.
             let innerWheel = new Winwheel({
-                'numSegments' : 4,
+                'numSegments' : 16,
                 'outerRadius' : 110,        // Set the outer radius to make the wheel smaller than the outer wheel.
                 'segments': [
-                    {'fillStyle' : '#eae56f', 'text' : 'Inner 1'},
-                    {'fillStyle' : '#89f26e', 'text' : 'Inner 2'},
-                    {'fillStyle' : '#7de6ef', 'text' : 'Inner 3'},
-                    {'fillStyle' : '#e7706f', 'text' : 'Inner 4'}
+                    {'fillStyle' : '#eae56f', 'text' : 'GLUTEN'},
+                    {'fillStyle' : '#89f26e', 'text' : 'GHOSTY'},
+                    {'fillStyle' : '#7de6ef', 'text' : 'GLUTEN'},
+                    {'fillStyle' : '#e7706f', 'text' : 'GHOSTY'},
+                    {'fillStyle' : '#7de6ef', 'text' : 'GLUTEN'},
+                    {'fillStyle' : '#e7706f', 'text' : 'GHOSTY'},
+                    {'fillStyle' : '#eae56f', 'text' : 'GLUTEN'},
+                    {'fillStyle' : '#89f26e', 'text' : 'GHOSTY'},
+                    {'fillStyle' : '#7de6ef', 'text' : 'GLUTEN'},
+                    {'fillStyle' : '#e7706f', 'text' : 'GHOSTY'},
+                    {'fillStyle' : '#7de6ef', 'text' : 'GLUTEN'},
+                    {'fillStyle' : '#e7706f', 'text' : 'GHOSTY'},
+                    {'fillStyle' : '#7de6ef', 'text' : 'GLUTEN'},
+                    {'fillStyle' : '#e7706f', 'text' : 'GHOSTY'},
+                    {'fillStyle' : '#7de6ef', 'text' : 'GLUTEN'},
+                    {'fillStyle' : '#e7706f', 'text' : 'GHOSTY'}
                 ]
             });
 
